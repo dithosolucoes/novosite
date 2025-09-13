@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Ana Veiga Makeup</title>
+  <style>
+    /* CSS global básico */
+    body { margin: 0; padding: 0; font-family: 'Montserrat', sans-serif; color: #333; background: #fff; }
+    h1, h2, h3 { font-family: 'Playfair Display', serif; margin: 0; color: #222; }
+    .container { max-width: 1200px; margin: 0 auto; padding: 20px; }
+    .btn-primary { background-color: #b8854d; color: #fff; padding: 12px 24px; border: none; border-radius: 4px; cursor: pointer; }
+    .btn-primary:hover { background-color: #a5763c; }
+    img { max-width: 100%; height: auto; display: block; }
+    .section { padding: 60px 0; }
+    .text-center { text-align: center; }
+    /* Layout de grid para portfólio etc */
+    .grid-3 { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px; }
+    .before-after { position: relative; overflow: hidden; }
+    .before-after img.before, .before-after img.after { width: 100%; display: block; }
+    /* Para deslizar ou hover etc poderia usar JS ou CSS avançado – simplificarei */
+    /* Navbar simples */
+    nav { display: flex; justify-content: space-between; align-items: center; padding: 20px; background: rgba(255,255,255,0.9); position: sticky; top: 0; z-index: 100; }
+    nav a { margin: 0 10px; text-decoration: none; color: #333; font-weight: bold; }
+    /* Responsividade */
+    @media(max-width:768px) {
+      .container { padding: 10px; }
+      .section { padding: 40px 0; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navbar -->
+  <nav class="container">
+    <a href="#hero">Ana Veiga</a>
+    <a href="#servicos">Serviços</a>
+    <a href="#portfolio">Portfólio</a>
+    <a href="#cursos">Cursos</a>
+    <a href="#contato">Contato</a>
+  </nav>
+
+  <!-- Seção 1: Hero -->
+  <section id="hero" class="section text-center" style="background: url('hero-imagem-exemplo.jpg') center/cover no-repeat; color: white; padding: 120px 20px;">
+    <div class="container">
+      <h1>Maquiagem que revela quem você é — com técnica, beleza e identidade</h1>
+      <p>Ana Veiga: especialista em pele negra, noivas & airbrush com mais de 12 anos transformando vidas e formando alunas que brilham.</p>
+      <button class="btn-primary">Agendar Avaliação Gratuita</button>
+    </div>
+  </section>
+
+  <!-- Seção 2: Portfólio de Destaques -->
+  <section id="portfolio" class="section">
+    <div class="container">
+      <h2 class="text-center">Meu Portfólio: Momentos que Transformam</h2>
+      <p class="text-center">Veja algumas das transformações mais marcantes — noivas, pele negra impecável e arte visual que vai além da maquiagem.</p>
+      <div class="grid-3">
+        <div><img src="portfolio1.jpg" alt="Transformação noiva 1"></div>
+        <div><img src="portfolio2.jpg" alt="Antes e Depois pele negra"></div>
+        <div><img src="portfolio3.jpg" alt="Maquiagem artística detalhe"></div>
+      </div>
+      <div class="text-center" style="margin-top:20px;">
+        <button class="btn-primary">Ver Galeria Completa</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Seção 3: Serviços & Ofertas -->
+  <section id="servicos" class="section" style="background:#f9f9f9;">
+    <div class="container">
+      <h2 class="text-center">Serviços Personalizados para Seu Momento Especial</h2>
+      <div class="grid-3">
+        <div>
+          <h3>Noiva Completa</h3>
+          <p>Maquiagem + prova + acabamento especial, para brilhar no altar.</p>
+        </div>
+        <div>
+          <h3>Beleza Social & Evento</h3>
+          <p>Looks elegantes que duram a noite inteira.</p>
+        </div>
+        <div>
+          <h3>Curso Online & Presencial</h3>
+          <p>Aprenda técnicas exclusivas com Ana Veiga, no seu ritmo.</p>
+        </div>
+      </div>
+      <div class="text-center" style="margin-top:20px;">
+        <button class="btn-primary">Ver Pacotes & Orçamentos</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Seção 4: Depoimentos -->
+  <section id="depoimentos" class="section">
+    <div class="container">
+      <h2 class="text-center">Depoimentos que Falam Alto</h2>
+      <div class="grid-3">
+        <div>
+          <p>“No meu casamento, me senti única. Cada detalhe da maquiagem da Ana parecia feito pra mim. O acabamento, a pele, tudo perfeito.”</p>
+          <p><strong>— Mariana R., SP</strong></p>
+        </div>
+        <div>
+          <p>“Depois do curso online da Ana, aprendi a valorizar minha pele negra de verdade. Me sinto mais confiante!”</p>
+          <p><strong>— Bianca L., RJ</strong></p>
+        </div>
+        <div>
+          <p>“Profissionalismo, atenção aos detalhes e resultado natural, sem perder o glamour.”</p>
+          <p><strong>— Juliana C., BH</strong></p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Seção 5: Antes & Depois -->
+  <section id="antes-depois" class="section" style="background:#f1f1f1;">
+    <div class="container">
+      <h2 class="text-center">Antes & Depois: O Poder da Transformação</h2>
+      <div class="grid-3">
+        <div class="before-after">
+          <img src="antes1.jpg" alt="Antes" class="before">
+          <img src="depois1.jpg" alt="Depois" class="after">
+        </div>
+        <div class="before-after">
+          <img src="antes2.jpg" alt="Antes" class="before">
+          <img src="depois2.jpg" alt="Depois" class="after">
+        </div>
+        <div class="before-after">
+          <img src="antes3.jpg" alt="Antes" class="before">
+          <img src="depois3.jpg" alt="Depois" class="after">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Seção 6: Especialização -->
+  <section id="especializacao" class="section">
+    <div class="container">
+      <h2 class="text-center">Especialista em Pele Negra & Arte para Noivas</h2>
+      <p class="text-center">Cada tom importa. Cada detalhe faz diferença. Trabalho com produtos de alta qualidade, técnicas personalizadas e acabamento artístico para realçar sua beleza única — especialmente se sua pele for negra ou escura.</p>
+      <div class="text-center" style="margin-top:20px;">
+        <button class="btn-primary">Ver Trabalhos com Pele Negra</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Seção 7: Sobre Mim -->
+  <section id="sobre" class="section" style="background:#f9f9f9;">
+    <div class="container">
+      <h2 class="text-center">Minha Jornada na Beleza</h2>
+      <div class="grid-2">
+        <div><img src="ana_veiga_pessoal.jpg" alt="Ana Veiga"></div>
+        <div>
+          <p>Sou Ana Veiga. Há mais de uma década, dedico-me à arte da maquiagem. Minha paixão começou quando percebi que muitas mulheres negras tinham dificuldade de encontrar profissionais que entendessem suas peles. Desde então, formei milhares de alunas, realizei sonhos de noivas, desenvolvi trabalhos artísticos e de alta exigência. Meu compromisso é técnico + humano: que você se sinta vista, valorizada, confiante.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Seção 8: Processo -->
+  <section id="processo" class="section">
+    <div class="container">
+      <h2 class="text-center">Como Funciona: Sua Experiência Comigo</h2>
+      <div class="grid-4">
+        <div>
+          <h3>1. Consulta inicial</h3>
+          <p>Conversemos sobre seu estilo, tom de pele, ocasião.</p>
+        </div>
+        <div>
+          <h3>2. Proposta personalizada</h3>
+          <p>Serviço ou curso ideal, orçamento claro.</p>
+        </div>
+        <div>
+          <h3>3. Produção</h3>
+          <p>Prova (para noivas) ou aulas práticas; maquiagem no dia.</p>
+        </div>
+        <div>
+          <h3>4. Finalização & feedback</h3>
+          <p>Fotos, retoques e orientações para que tudo dure mais.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Seção 9: Agenda -->
+  <section id="agenda" class="section" style="background:#f1f1f1;">
+    <div class="container text-center">
+      <h2>Reserve sua Data Exclusiva</h2>
+      <p>Datas limitadas para atendimento VIP de noivas & eventos. Verifique disponibilidade do seu dia e garanta seu lugar.</p>
+      <button class="btn-primary">Agendar Agora</button>
+    </div>
+  </section>
+
+  <!-- Seção 10: FAQ -->
+  <section id="faq" class="section">
+    <div class="container">
+      <h2 class="text-center">Perguntas Frequentes</h2>
+      <div>
+        <details><summary>Quanto tempo dura uma preparação de noiva completa?</summary>
+          Depende do look e técnica, mas em geral de 2 a 3 horas (incluindo prova, maquiagem, retoques).
+        </details>
+        <details><summary>Você trabalha com todos os tons e tipos de pele?</summary>
+          Sim — tenho especialização em pele negra, uso produtos específicos e técnicas que valorizam cada tom.
+        </details>
+        <details><summary>Como sei se meu tom de pele ficará bonito na maquiagem?</summary>
+          Faço prova e preparo de pele apropriado, ajuste de cor, texturas, além de fotos para garantir que fique ótimo ao vivo e em imagem.
+        </details>
+        <details><summary>Os cursos são para iniciantes ou avançados?</summary>
+          Ambos — ofereço cursos para quem está começando, mas também aperfeiçoamentos e técnicas avançadas.
+        </details>
+        <details><summary>Os produtos utilizados são de alta qualidade / cruelty free / seguros?</summary>
+          Sim — trabalho apenas com marcas confiáveis; informo cada produto usado para que tenha confiança no resultado.
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <!-- Seção 11: Cursos -->
+  <section id="cursos" class="section">
+    <div class="container">
+      <h2 class="text-center">Cursos & Workshops</h2>
+      <div class="grid-3">
+        <div>
+          <h3>Curso de Aperfeiçoamento Online</h3>
+          <p>Técnicas avançadas para pele negra, acabamento e airbrush.</p>
+        </div>
+        <div>
+          <h3>Workshop Presencial</h3>
+          <p>Prática intensiva + acompanhamento direto.</p>
+        </div>
+        <div>
+          <h3>Turma VIP “Noiva Pro”</h3>
+          <p>Preparação completa para maquiadores que desejam atuar em casamentos + atendimento premium.</p>
+        </div>
+      </div>
+      <div class="text-center" style="margin-top:20px;">
+        <button class="btn-primary">Ver Próximas Turmas</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Seção 12: Contato Rápido -->
+  <section id="contato" class="section" style="background:#f9f9f9;">
+    <div class="container">
+      <h2 class="text-center">Vamos Conversar?</h2>
+      <p class="text-center">Me diga seu evento ou curso — entrarei em contato para alinhar os detalhes.</p>
+      <form class="container" style="max-width:600px; margin:0 auto;">
+        <input type="text" name="nome" placeholder="Seu nome" required style="width:100%; padding:10px; margin-bottom:10px;">
+        <input type="email" name="email" placeholder="Seu e-mail" required style="width:100%; padding:10px; margin-bottom:10px;">
+        <input type="text" name="whatsapp" placeholder="WhatsApp (com DDD)" style="width:100%; padding:10px; margin-bottom:10px;">
+        <select name="tipo" style="width:100%; padding:10px; margin-bottom:10px;">
+          <option value="">Tipo de serviço ou curso</option>
+          <option value="noiva">Noiva</option>
+          <option value="evento">Evento / social</option>
+          <option value="curso online">Curso online</option>
+          <option value="curso presencial">Curso presencial</option>
+        </select>
+        <input type="date" name="data_prevista" style="width:100%; padding:10px; margin-bottom:10px;">
+        <input type="text" name="cidade" placeholder="Cidade" style="width:100%; padding:10px; margin-bottom:10px;">
+        <button type="submit" class="btn-primary" style="width:100%;">Enviar Mensagem</button>
+      </form>
+    </div>
+  </section>
+
+  <!-- Seção 13: Blog / Artigos -->
+  <section id="blog" class="section" style="background:#f1f1f1;">
+    <div class="container">
+      <h2 class="text-center">Dicas, Inspirações & Trends</h2>
+      <div class="grid-3">
+        <div>
+          <img src="blog1.jpg" alt="Tutorial pele negra">
+          <h3>Tutorial: Preparando pele negra para o grande dia</h3>
+        </div>
+        <div>
+          <img src="blog2.jpg" alt="Tendência maquiagem noivas">
+          <h3>Tendência 2025: Bride Glow — pele de noiva iluminada natural</h3>
+        </div>
+        <div>
+          <img src="blog3.jpg" alt="Produtos cruelty free">
+          <h3>Como escolher produtos de maquiagem seguros & cruelty-free</h3>
+        </div>
+      </div>
+      <div class="text-center" style="margin-top:20px;">
+        <button class="btn-primary">Ler mais artigos</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Seção 14: Rodapé -->
+  <footer class="section" style="background:#222; color:#fff;">
+    <div class="container text-center">
+      <p>© 2025 Ana Veiga Makeup – Todos os Direitos Reservados</p>
+      <p>Certificações | Políticas de Privacidade | Termos de Uso</p>
+      <div style="margin-top:10px;">
+        <a href="https://instagram.com/anaveigga" style="color:#fff; margin:0 5px;">Instagram</a> |
+        <a href="#" style="color:#fff; margin:0 5px;">YouTube</a> |
+        <a href="#" style="color:#fff; margin:0 5px;">Facebook</a>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // JS simples para interatividade mínima (exemplo de scroll suave)
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function(e) {
+        e.preventDefault();
+        document.querySelector(this.getAttribute('href')).scrollIntoView({ behavior: 'smooth' });
+      });
+    });
+  </script>
+
+</body>
+</html>
