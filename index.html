@@ -1,311 +1,276 @@
-<!DOCTYPE html>
-<html lang="pt-BR">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Ana Veiga Makeup</title>
-  <style>
-    /* CSS global básico */
-    body { margin: 0; padding: 0; font-family: 'Montserrat', sans-serif; color: #333; background: #fff; }
-    h1, h2, h3 { font-family: 'Playfair Display', serif; margin: 0; color: #222; }
-    .container { max-width: 1200px; margin: 0 auto; padding: 20px; }
-    .btn-primary { background-color: #b8854d; color: #fff; padding: 12px 24px; border: none; border-radius: 4px; cursor: pointer; }
-    .btn-primary:hover { background-color: #a5763c; }
-    img { max-width: 100%; height: auto; display: block; }
-    .section { padding: 60px 0; }
-    .text-center { text-align: center; }
-    /* Layout de grid para portfólio etc */
-    .grid-3 { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px; }
-    .before-after { position: relative; overflow: hidden; }
-    .before-after img.before, .before-after img.after { width: 100%; display: block; }
-    /* Para deslizar ou hover etc poderia usar JS ou CSS avançado – simplificarei */
-    /* Navbar simples */
-    nav { display: flex; justify-content: space-between; align-items: center; padding: 20px; background: rgba(255,255,255,0.9); position: sticky; top: 0; z-index: 100; }
-    nav a { margin: 0 10px; text-decoration: none; color: #333; font-weight: bold; }
-    /* Responsividade */
-    @media(max-width:768px) {
-      .container { padding: 10px; }
-      .section { padding: 40px 0; }
+{
+  "etapa": 6,
+  "secoes": [
+    {
+      "nome": "Hero / Apresentação Imersiva",
+      "objetivo_estrategico": "Capturar atenção imediata com forte impacto visual + mostrar a transformação que ela entrega; deixar claro quem é e o que oferece premium.",
+      "copy": {
+        "headline": "Transforme seu visual. Impressione em cada clique.",
+        "subheadline": "Make profissional premium para ocasiões únicas, sessões fotográficas e eventos memoráveis.",
+        "microcopy": "Portfólio selecionado • Atendimento VIP • Serviços personalizados",
+        "cta": {
+          "rotulo": "Agende sua transformação",
+          "url": "https://wa.me/55<TELEFONE>?text=Olá%20Letícia,%20vi%20seu%20site%20e%20quero%20reservar%20uma%20maquiagem%20premium",
+          "fallback_form": true
+        }
+      },
+      "design": {
+        "cores": ["#1F1F1F","#E6B800","#ffffff"],
+        "tipografia": {"titulo":"Playfair Display Bold","corpo":"Montserrat Regular","alternativas":["Georgia","Lato"]},
+        "imagens": {"estilo":"editorial glam de evento, fotos de rosto em close-up com maquiagem impecável","placeholders":["hero1.jpg","hero2.jpg"]},
+        "grid": "full-width hero, overlay suave, chamada centralizada, responsiva mobile first",
+        "microinteracoes": ["efeito parallax levemente no scroll do hero","hover nos botões com glow dourado","transição suave fade-in do texto ao entrar"]
+      },
+      "linha_de_raciocinio": ["Primeira dobra precisa causar efeito wow","visual glam coincide com expectativa de cliente premium","call to action imediato aproveita desejo forte no momento de impressão visual"],
+      "kpis_esperados": {
+        "ctr_cta": "≥ 20% no botão principal",
+        "tempo_medio_secao": "10-15 segundos",
+        "scroll_ate_secao": "≥ 90% das visitas veem esta seção"
+      }
+    },
+    {
+      "nome": "Portfólio Visual com Antes e Depois / Galeria de Transformações",
+      "objetivo_estrategico": "Mostrar prova visual de competência — elimina dúvidas, gera confiança, exemplo concreto de transformação em pele, luz, cor, acabamento.",
+      "copy": {
+        "headline": "Veja transformações reais",
+        "subheadline": "Antes, durante e depois — cada make conta uma história visual",
+        "microcopy": "Clique para ampliar • Fotografia profissional • Galeria variada (noiva / festa / editorial)",
+        "cta": {
+          "rotulo": "Ver galeria completa",
+          "url": "#portfolio",
+          "fallback_form": false
+        }
+      },
+      "design": {
+        "cores": ["#FFFFFF","#1F1F1F","#E6B800"],
+        "tipografia": {"titulo":"Playfair Display Bold","corpo":"Montserrat Light","alternativas":["Georgia","Lato"]},
+        "imagens": {"estilo":"avant-garde + glamour, close-ups", "placeholders":["portfolio1.jpg","portfolio2.jpg","portfolio3.jpg"]},
+        "grid": "mosaico 3 colunas no desktop, 1-2 col em mobile, padronização de aspecto para coerência visual",
+        "microinteracoes": ["hover anima zoom-in nas imagens","lightbox ao clicar","lazy load das imagens para performance"],
+      },
+      "linha_de_raciocinio": ["cliente vê resultados visuais, compara e decide", "antes/depois evidencia transformação e diferencial técnico", "galeria forte é diferencial em serviço premium"],
+      "kpis_esperados": {
+        "ctr_cta": "≥ 15% nos itens da galeria",
+        "tempo_medio_secao": "20-30 segundos",
+        "scroll_ate_secao": "≥ 75%"
+      }
+    },
+    {
+      "nome": "Serviços & Pacotes",
+      "objetivo_estrategico": "Mostrar claramente o que a maquiadora oferece (serviços específicos), preços ou faixas, pacotes, para evitar hesitação na contratação.",
+      "copy": {
+        "headline": "Serviços Premium feitos para você",
+        "subheadline": "Customize seu pacote: festas, noivas, editoriais, ensaios — tudo sob medida",
+        "microcopy": "Inclui prova quando necessário • Produtos de alta qualidade • Atendimento VIP",
+        "cta": {
+          "rotulo": "Ver serviços & preços",
+          "url": "#servicos",
+          "fallback_form": false
+        }
+      },
+      "design": {
+        "cores": ["#FFFFFF","#333333","#E6B800"],
+        "tipografia": {"titulo":"Montserrat Semi-Bold","corpo":"Montserrat Regular","alternativas":["Lato","Roboto"]},
+        "imagens": {"estilo":"imagens de serviço em ação (maquiadora trabalhando, ambiente, cliente satisfeita)", "placeholders":["servico1.jpg","servico2.jpg"]},
+        "grid": "cards de serviço com ícones/imagens, layout responsivo em linhas com alternância imagem/texto",
+        "microinteracoes": ["hover nos cards com sombra e leve elevação","botão “mais info” revela modal ou flip card","animações de entrada ao scroll"],
+      },
+      "linha_de_raciocinio": ["clientes precisam ver exatamente o que está incluso, quanto custa, o que esperar", "pacotes ajudam aumentar ticket médio (ex: noiva + prova + ensaio)", "diferença no serviço distintivo deve ficar clara vs concorrentes baratos"],
+      "kpis_esperados": {
+        "ctr_cta": "≥ 12% nas opções de serviço",
+        "tempo_medio_secao": "20-25 segundos",
+        "scroll_ate_secao": "≥ 65%"
+      }
+    },
+    {
+      "nome": "Sobre Leticia – História & Proposta de Valor",
+      "objetivo_estrategico": "Conectar emocionalmente; mostrar trajetória, valores, diferencial pessoal; reforçar confiança e credibilidade.",
+      "copy": {
+        "headline": "Muito além da maquiagem",
+        "subheadline": "Minha jornada, meu compromisso com a excelência e beleza única de cada cliente",
+        "microcopy": "Formações • Estilo de atendimento • Filosofia de beleza",
+        "cta": {
+          "rotulo": "Saiba mais",
+          "url": "#sobre",
+          "fallback_form": false
+        }
+      },
+      "design": {
+        "cores": ["#F9F9F9","#1F1F1F","#E6B800"],
+        "tipografia": {"titulo":"Playfair Display Italic","corpo":"Montserrat Regular","alternativas":["Georgia","Lora"]},
+        "imagens": {"estilo":"foto autoral, bastidores, retratos", "placeholders":["perfil1.jpg","perfil2.jpg"]},
+        "grid": "texto + imagem alternados, estilo storytelling visual, parágrafos curtos, 2-3 blocos de texto em desktop, mobile simplificado",
+        "microinteracoes": ["fade-in das seções de texto","parallax leve entre imagem/texto","hover suave nas imagens autorais"],
+      },
+      "linha_de_raciocinio": ["cliente quer confiar no profissional, não só na estética", "valores pessoais (qualidade, atendimento, exclusividade) vendem diferencial", "história conecta e humaniza marca premium"],
+      "kpis_esperados": {
+        "ctr_cta": "≥ 8% para “Saiba mais”",
+        "tempo_medio_secao": "30-40 segundos",
+        "scroll_ate_secao": "≥ 60%"
+      }
+    },
+    {
+      "nome": "Depoimentos & Provas Sociais",
+      "objetivo_estrategico": "Eliminar objeções, mostrar resultados através de clientes reais, revisar credibilidade e confiança no serviço premium.",
+      "copy": {
+        "headline": "O que falam de mim",
+        "subheadline": "Depoimentos autênticos de clientes que viveram sua transformação",
+        "microcopy": "Eventos reais • Antes/depois • Fotos reais, não apenas edição",
+        "cta": {
+          "rotulo": "Veja mais depoimentos",
+          "url": "#depoimentos",
+          "fallback_form": false
+        }
+      },
+      "design": {
+        "cores": ["#FFFFFF","#333333","#E6B800"],
+        "tipografia": {"titulo":"Montserrat Semi-Bold","corpo":"Montserrat Light","alternativas":["Lato","Roboto"]},
+        "imagens": {"estilo":"foto de cliente feliz, close no olho/boca, resultados naturais ou glam", "placeholders":["cliente1.jpg","cliente2.jpg"]},
+        "grid": "slider/carrossel com imagens + texto, responsivo, autoplay suave, com controle manual",
+        "microinteracoes": ["slide automático com pausa ao hover","animação de entrada","efeito de zoom sutil nas imagens de depoimento"]
+      },
+      "linha_de_raciocinio": ["depoimentos diminuem incerteza de novo cliente", "provas visuais reforçam resultados prometidos", "slider mantém dinamismo sem sobrecarregar layout"],
+      "kpis_esperados": {
+        "ctr_cta": "≥ 10% nos depoimentos",
+        "tempo_medio_secao": "20-30 segundos",
+        "scroll_ate_secao": "≥ 55%"
+      }
+    },
+    {
+      "nome": "Processo de Trabalho / Como é o atendimento",
+      "objetivo_estrategico": "Mostrar passo-a-passo, preparar expectativas, gerenciar objeções (”vai demorar?”, ”quais produtos usa?”, ”como chego?”, etc.).",
+      "copy": {
+        "headline": "Uma experiência premium do início ao fim",
+        "subheadline": "Desde o primeiro contato até o momento que você brilha",
+        "microcopy": "Consultoria de estilo • Provas • fotos • atendimento personalizado",
+        "cta": {
+          "rotulo": "Conheça passo a passo",
+          "url": "#processo",
+          "fallback_form": false
+        }
+      },
+      "design": {
+        "cores": ["#F9F9F9","#1F1F1F","#E6B800"],
+        "tipografia": {"titulo":"Montserrat Regular","corpo":"Montserrat Light","alternativas":["Lato","Roboto"]},
+        "imagens": {"estilo":"bastidores, making-of, interação cliente-maquiadora", "placeholders":["processo1.jpg","processo2.jpg"]},
+        "grid": "blocos alternados imagem/texto ou texto/imagem, timeline visual, mobile adaptado",
+        "microinteracoes": ["reveal on scroll para cada bloco","hover nas imagens","micro animações de linha conectando ícones do processo"],
+      },
+      "linha_de_raciocinio": ["previsibilidade traz segurança ao cliente", "ajuda no processo de decisão, reduz objeções", "valor percebido aumenta ao mostrar cuidado/personalização"],
+      "kpis_esperados": {
+        "ctr_cta": "≥ 8% nos pontos de processo",
+        "tempo_medio_secao": "25-30 segundos",
+        "scroll_ate_secao": "≈ 60%"
+      }
+    },
+    {
+      "nome": "FAQs / Perguntas Frequentes",
+      "objetivo_estrategico": "Antecipar dúvidas (preço, local, higiene, produtos usados, logística, tempo), reduzir barreiras ao contato ou reserva, gerar transparência.",
+      "copy": {
+        "headline": "Dúvidas que você possa ter",
+        "subheadline": "Respostas claras para decisões seguras",
+        "microcopy": "",
+        "cta": {
+                  "rotulo": "Ver perguntas completas",
+                  "url": "#faq",
+                  "fallback_form": false
+                }
+      },
+      "design": {
+        "cores": ["#FFFFFF","#333333","#E6B800"],
+        "tipografia": {"titulo":"Montserrat Semi-Bold","corpo":"Montserrat Light","alternativas":["Lato","Roboto"]},
+        "imagens": {"estilo":"ícones simples para cada pergunta","placeholders":[]},
+        "grid": "acordeões ou tabs", mobile-friendly",
+        "microinteracoes": ["toggle/accordion","animar abertura suave","icone de +/- customizado"]
+      },
+      "linha_de_raciocinio": ["reduzir ansiedade de cliente que hesita", "evitar conversas iniciais repetidas", "melhorar confiança", “economia de tempo no contato”],
+      "kpis_esperados": {
+        "ctr_cta": "-",  // não se aplica CTA forte, foco é diminuir barreiras
+        "tempo_medio_secao": "30-40 segundos",
+        "scroll_ate_secao": "≈ 50%"
+      }
+    },
+    {
+      "nome": "Portfolio de Preços & Reserva / Agendamento",
+      "objetivo_estrategico": "Levar o visitante a ação concreta: ver preços, pacotes, reservar/entrar em contato; reduzir fricção no agendamento.",
+      "copy": {
+        "headline": "Reserve sua data premium",
+        "subheadline": "Consultoria de data, prova (se aplicável) e serviço personalizado",
+        "microcopy": "Agenda limitada • Solicite orçamento ou reserve direto",
+        "cta": {
+          "rotulo": "Agendar agora",
+          "url": "https://wa.me/55<TELEFONE>?text=Quero%20agendar%20uma%20make%20premium",
+          "fallback_form": true
+        }
+      },
+      "design": {
+        "cores": ["#1F1F1F","#E6B800","#FFFFFF"],
+        "tipografia": {"titulo":"Montserrat Semi-Bold","corpo":"Montserrat Regular","alternativas":["Lato"]},
+        "imagens": {"estilo":"agenda visual, calendário estilizado, ambiente profissional", "placeholders":["agenda1.jpg"]},
+        "grid": "call-to action destacada, botão fixo no mobile no canto inferior, formulário simples",
+        "microinteracoes": ["sticky CTA no mobile","hover efeito dourado no botão","feedback visual ao preencher formulário/WhatsApp"],
+      },
+      "linha_de_raciocinio": ["sem reserva clara, cliente pode desistir ou buscar concorrente", "agenda limitada aumenta percepção de valor/exclusividade", "botão visível incentiva ação imediata"],
+      "kpis_esperados": {
+        "ctr_cta": "≥ 18% nos botões de agendar",
+        "tempo_medio_secao": "20 segundos",
+        "scroll_ate_secao": "≥ 50%"
+      }
+    },
+    {
+      "nome": "Galeria Vídeos / Reels e Makes em Movimento",
+      "objetivo_estrategico": "Mostrar maquiagem em uso real — vídeo revela textura/luz/como fica no rosto ao vivo, favorece confiança e engajamento.",
+      "copy": {
+        "headline": "Veja em movimento",
+        "subheadline": "Reels, clipes, bastidores e makes em ação",
+        "microcopy": "Mídia original • Close em pele real • Stories de bastidores",
+        "cta": {
+          "rotulo": "Assista agora",
+          "url": "#videos",
+          "fallback_form": false
+        }
+      },
+      "design": {
+        "cores": ["#FFFFFF","#333333","#E6B800"],
+        "tipografia": {"titulo":"Montserrat Semi-Bold","corpo":"Montserrat Light","alternativas":["Lato","Roboto"]},
+        "imagens": {"estilo":"vídeos curtos, clipes de instagram/reels, ambientes reais", "placeholders":["video1.mp4","video2.mp4"]},
+        "grid": "video banner + grid vídeos em dois por linha desktop, 1-coluna mobile",
+        "microinteracoes": ["autoplay mudo ao scroll", "hover sobre miniaturas para preview", "lightbox de vídeo"],
+      },
+      "linha_de_raciocinio": ["vídeo gera confiança maior que foto estática", "texto + vídeo ajudam entender cor, acabamento, durabilidade", "bom para engajamento social + SEO multimedia"],
+      "kpis_esperados": {
+        "ctr_cta": "≥ 12% nos cliques para vídeos",
+        "tempo_medio_secao": "30-40 segundos",
+        "scroll_ate_secao": "≥ 60%"
+      }
+    },
+    {
+      "nome": "Contato / Localização / Mídias & Redes Sociais",
+      "objetivo_estrategico": "Facilitar contato, melhorar visibilidade local (se relevância física), mostrar presença social para reforçar autoridade e confiança.",
+      "copy": {
+        "headline": "Conecte-se comigo",
+        "subheadline": "Dúvidas, reservas ou parcerias — estou à disposição",
+        "microcopy": "Atendo em Belo Horizonte / trabalhos externos • Follow nas redes • Mídia & colabs",
+        "cta": {
+                  "rotulo": "Whatsapp agora",
+                  "url": "https://wa.me/55<TELEFONE>?text=Oi%20Letícia,%20quero%20mais%20informações",
+                  "fallback_form": true
+                }
+      },
+      "design": {
+        "cores": ["#FFFFFF","#333333","#E6B800"],
+        "tipografia": {"titulo":"Montserrat Regular","corpo":"Montserrat Light","alternativas":["Lato"]},
+        "imagens": {"estilo":"ambiente/stúdio, foto de atendimento, bastidores", "placeholders":["estudio.jpg","contato.jpg"]},
+        "grid": "coluna / coluna em desktop; mobile com botão fixo WhatsApp / formulário sencillo",
+        "microinteracoes": ["hover nos ícones sociais","feedback visual ao enviar formulário","sticky barra de contato no mobile"]
+      },
+      "linha_de_raciocinio": ["reduz fricção de contato", "cliente não precisa procurar telefone ou redes sociais separadas", "rede social = prova social + engajamento extra"],
+      "kpis_esperados": {
+        "ctr_cta": "≥ 15% nos botões de contato",
+        "tempo_medio_secao": "15-20 segundos",
+        "scroll_ate_secao": "≥ 70%"
+      }
     }
-  </style>
-</head>
-<body>
-
-  <!-- Navbar -->
-  <nav class="container">
-    <a href="#hero">Ana Veiga</a>
-    <a href="#servicos">Serviços</a>
-    <a href="#portfolio">Portfólio</a>
-    <a href="#cursos">Cursos</a>
-    <a href="#contato">Contato</a>
-  </nav>
-
-  <!-- Seção 1: Hero -->
-  <section id="hero" class="section text-center" style="background: url('hero-imagem-exemplo.jpg') center/cover no-repeat; color: white; padding: 120px 20px;">
-    <div class="container">
-      <h1>Maquiagem que revela quem você é — com técnica, beleza e identidade</h1>
-      <p>Ana Veiga: especialista em pele negra, noivas & airbrush com mais de 12 anos transformando vidas e formando alunas que brilham.</p>
-      <button class="btn-primary">Agendar Avaliação Gratuita</button>
-    </div>
-  </section>
-
-  <!-- Seção 2: Portfólio de Destaques -->
-  <section id="portfolio" class="section">
-    <div class="container">
-      <h2 class="text-center">Meu Portfólio: Momentos que Transformam</h2>
-      <p class="text-center">Veja algumas das transformações mais marcantes — noivas, pele negra impecável e arte visual que vai além da maquiagem.</p>
-      <div class="grid-3">
-        <div><img src="portfolio1.jpg" alt="Transformação noiva 1"></div>
-        <div><img src="portfolio2.jpg" alt="Antes e Depois pele negra"></div>
-        <div><img src="portfolio3.jpg" alt="Maquiagem artística detalhe"></div>
-      </div>
-      <div class="text-center" style="margin-top:20px;">
-        <button class="btn-primary">Ver Galeria Completa</button>
-      </div>
-    </div>
-  </section>
-
-  <!-- Seção 3: Serviços & Ofertas -->
-  <section id="servicos" class="section" style="background:#f9f9f9;">
-    <div class="container">
-      <h2 class="text-center">Serviços Personalizados para Seu Momento Especial</h2>
-      <div class="grid-3">
-        <div>
-          <h3>Noiva Completa</h3>
-          <p>Maquiagem + prova + acabamento especial, para brilhar no altar.</p>
-        </div>
-        <div>
-          <h3>Beleza Social & Evento</h3>
-          <p>Looks elegantes que duram a noite inteira.</p>
-        </div>
-        <div>
-          <h3>Curso Online & Presencial</h3>
-          <p>Aprenda técnicas exclusivas com Ana Veiga, no seu ritmo.</p>
-        </div>
-      </div>
-      <div class="text-center" style="margin-top:20px;">
-        <button class="btn-primary">Ver Pacotes & Orçamentos</button>
-      </div>
-    </div>
-  </section>
-
-  <!-- Seção 4: Depoimentos -->
-  <section id="depoimentos" class="section">
-    <div class="container">
-      <h2 class="text-center">Depoimentos que Falam Alto</h2>
-      <div class="grid-3">
-        <div>
-          <p>“No meu casamento, me senti única. Cada detalhe da maquiagem da Ana parecia feito pra mim. O acabamento, a pele, tudo perfeito.”</p>
-          <p><strong>— Mariana R., SP</strong></p>
-        </div>
-        <div>
-          <p>“Depois do curso online da Ana, aprendi a valorizar minha pele negra de verdade. Me sinto mais confiante!”</p>
-          <p><strong>— Bianca L., RJ</strong></p>
-        </div>
-        <div>
-          <p>“Profissionalismo, atenção aos detalhes e resultado natural, sem perder o glamour.”</p>
-          <p><strong>— Juliana C., BH</strong></p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Seção 5: Antes & Depois -->
-  <section id="antes-depois" class="section" style="background:#f1f1f1;">
-    <div class="container">
-      <h2 class="text-center">Antes & Depois: O Poder da Transformação</h2>
-      <div class="grid-3">
-        <div class="before-after">
-          <img src="antes1.jpg" alt="Antes" class="before">
-          <img src="depois1.jpg" alt="Depois" class="after">
-        </div>
-        <div class="before-after">
-          <img src="antes2.jpg" alt="Antes" class="before">
-          <img src="depois2.jpg" alt="Depois" class="after">
-        </div>
-        <div class="before-after">
-          <img src="antes3.jpg" alt="Antes" class="before">
-          <img src="depois3.jpg" alt="Depois" class="after">
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Seção 6: Especialização -->
-  <section id="especializacao" class="section">
-    <div class="container">
-      <h2 class="text-center">Especialista em Pele Negra & Arte para Noivas</h2>
-      <p class="text-center">Cada tom importa. Cada detalhe faz diferença. Trabalho com produtos de alta qualidade, técnicas personalizadas e acabamento artístico para realçar sua beleza única — especialmente se sua pele for negra ou escura.</p>
-      <div class="text-center" style="margin-top:20px;">
-        <button class="btn-primary">Ver Trabalhos com Pele Negra</button>
-      </div>
-    </div>
-  </section>
-
-  <!-- Seção 7: Sobre Mim -->
-  <section id="sobre" class="section" style="background:#f9f9f9;">
-    <div class="container">
-      <h2 class="text-center">Minha Jornada na Beleza</h2>
-      <div class="grid-2">
-        <div><img src="ana_veiga_pessoal.jpg" alt="Ana Veiga"></div>
-        <div>
-          <p>Sou Ana Veiga. Há mais de uma década, dedico-me à arte da maquiagem. Minha paixão começou quando percebi que muitas mulheres negras tinham dificuldade de encontrar profissionais que entendessem suas peles. Desde então, formei milhares de alunas, realizei sonhos de noivas, desenvolvi trabalhos artísticos e de alta exigência. Meu compromisso é técnico + humano: que você se sinta vista, valorizada, confiante.</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Seção 8: Processo -->
-  <section id="processo" class="section">
-    <div class="container">
-      <h2 class="text-center">Como Funciona: Sua Experiência Comigo</h2>
-      <div class="grid-4">
-        <div>
-          <h3>1. Consulta inicial</h3>
-          <p>Conversemos sobre seu estilo, tom de pele, ocasião.</p>
-        </div>
-        <div>
-          <h3>2. Proposta personalizada</h3>
-          <p>Serviço ou curso ideal, orçamento claro.</p>
-        </div>
-        <div>
-          <h3>3. Produção</h3>
-          <p>Prova (para noivas) ou aulas práticas; maquiagem no dia.</p>
-        </div>
-        <div>
-          <h3>4. Finalização & feedback</h3>
-          <p>Fotos, retoques e orientações para que tudo dure mais.</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Seção 9: Agenda -->
-  <section id="agenda" class="section" style="background:#f1f1f1;">
-    <div class="container text-center">
-      <h2>Reserve sua Data Exclusiva</h2>
-      <p>Datas limitadas para atendimento VIP de noivas & eventos. Verifique disponibilidade do seu dia e garanta seu lugar.</p>
-      <button class="btn-primary">Agendar Agora</button>
-    </div>
-  </section>
-
-  <!-- Seção 10: FAQ -->
-  <section id="faq" class="section">
-    <div class="container">
-      <h2 class="text-center">Perguntas Frequentes</h2>
-      <div>
-        <details><summary>Quanto tempo dura uma preparação de noiva completa?</summary>
-          Depende do look e técnica, mas em geral de 2 a 3 horas (incluindo prova, maquiagem, retoques).
-        </details>
-        <details><summary>Você trabalha com todos os tons e tipos de pele?</summary>
-          Sim — tenho especialização em pele negra, uso produtos específicos e técnicas que valorizam cada tom.
-        </details>
-        <details><summary>Como sei se meu tom de pele ficará bonito na maquiagem?</summary>
-          Faço prova e preparo de pele apropriado, ajuste de cor, texturas, além de fotos para garantir que fique ótimo ao vivo e em imagem.
-        </details>
-        <details><summary>Os cursos são para iniciantes ou avançados?</summary>
-          Ambos — ofereço cursos para quem está começando, mas também aperfeiçoamentos e técnicas avançadas.
-        </details>
-        <details><summary>Os produtos utilizados são de alta qualidade / cruelty free / seguros?</summary>
-          Sim — trabalho apenas com marcas confiáveis; informo cada produto usado para que tenha confiança no resultado.
-        </details>
-      </div>
-    </div>
-  </section>
-
-  <!-- Seção 11: Cursos -->
-  <section id="cursos" class="section">
-    <div class="container">
-      <h2 class="text-center">Cursos & Workshops</h2>
-      <div class="grid-3">
-        <div>
-          <h3>Curso de Aperfeiçoamento Online</h3>
-          <p>Técnicas avançadas para pele negra, acabamento e airbrush.</p>
-        </div>
-        <div>
-          <h3>Workshop Presencial</h3>
-          <p>Prática intensiva + acompanhamento direto.</p>
-        </div>
-        <div>
-          <h3>Turma VIP “Noiva Pro”</h3>
-          <p>Preparação completa para maquiadores que desejam atuar em casamentos + atendimento premium.</p>
-        </div>
-      </div>
-      <div class="text-center" style="margin-top:20px;">
-        <button class="btn-primary">Ver Próximas Turmas</button>
-      </div>
-    </div>
-  </section>
-
-  <!-- Seção 12: Contato Rápido -->
-  <section id="contato" class="section" style="background:#f9f9f9;">
-    <div class="container">
-      <h2 class="text-center">Vamos Conversar?</h2>
-      <p class="text-center">Me diga seu evento ou curso — entrarei em contato para alinhar os detalhes.</p>
-      <form class="container" style="max-width:600px; margin:0 auto;">
-        <input type="text" name="nome" placeholder="Seu nome" required style="width:100%; padding:10px; margin-bottom:10px;">
-        <input type="email" name="email" placeholder="Seu e-mail" required style="width:100%; padding:10px; margin-bottom:10px;">
-        <input type="text" name="whatsapp" placeholder="WhatsApp (com DDD)" style="width:100%; padding:10px; margin-bottom:10px;">
-        <select name="tipo" style="width:100%; padding:10px; margin-bottom:10px;">
-          <option value="">Tipo de serviço ou curso</option>
-          <option value="noiva">Noiva</option>
-          <option value="evento">Evento / social</option>
-          <option value="curso online">Curso online</option>
-          <option value="curso presencial">Curso presencial</option>
-        </select>
-        <input type="date" name="data_prevista" style="width:100%; padding:10px; margin-bottom:10px;">
-        <input type="text" name="cidade" placeholder="Cidade" style="width:100%; padding:10px; margin-bottom:10px;">
-        <button type="submit" class="btn-primary" style="width:100%;">Enviar Mensagem</button>
-      </form>
-    </div>
-  </section>
-
-  <!-- Seção 13: Blog / Artigos -->
-  <section id="blog" class="section" style="background:#f1f1f1;">
-    <div class="container">
-      <h2 class="text-center">Dicas, Inspirações & Trends</h2>
-      <div class="grid-3">
-        <div>
-          <img src="blog1.jpg" alt="Tutorial pele negra">
-          <h3>Tutorial: Preparando pele negra para o grande dia</h3>
-        </div>
-        <div>
-          <img src="blog2.jpg" alt="Tendência maquiagem noivas">
-          <h3>Tendência 2025: Bride Glow — pele de noiva iluminada natural</h3>
-        </div>
-        <div>
-          <img src="blog3.jpg" alt="Produtos cruelty free">
-          <h3>Como escolher produtos de maquiagem seguros & cruelty-free</h3>
-        </div>
-      </div>
-      <div class="text-center" style="margin-top:20px;">
-        <button class="btn-primary">Ler mais artigos</button>
-      </div>
-    </div>
-  </section>
-
-  <!-- Seção 14: Rodapé -->
-  <footer class="section" style="background:#222; color:#fff;">
-    <div class="container text-center">
-      <p>© 2025 Ana Veiga Makeup – Todos os Direitos Reservados</p>
-      <p>Certificações | Políticas de Privacidade | Termos de Uso</p>
-      <div style="margin-top:10px;">
-        <a href="https://instagram.com/anaveigga" style="color:#fff; margin:0 5px;">Instagram</a> |
-        <a href="#" style="color:#fff; margin:0 5px;">YouTube</a> |
-        <a href="#" style="color:#fff; margin:0 5px;">Facebook</a>
-      </div>
-    </div>
-  </footer>
-
-  <script>
-    // JS simples para interatividade mínima (exemplo de scroll suave)
-    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-      anchor.addEventListener('click', function(e) {
-        e.preventDefault();
-        document.querySelector(this.getAttribute('href')).scrollIntoView({ behavior: 'smooth' });
-      });
-    });
-  </script>
-
-</body>
-</html>
+    // Poderia incluir uma ou duas seções extras como Blog educacional ou Cursos se Letícia for ofertar, etc.
+  ]
+}
